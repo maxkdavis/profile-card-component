@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  font-family: "Kumbh Sans", sans-serif;
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-desat-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  box-sizing: border-box; /*element's width and height stays fixed and will not grow with padding or borders*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-cyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 45vw bottom 40vh, left 50vw top 40vh;
+  min-height: 100vh;
+  text-align: center;
+  display: flex; /*turn the whole body into a flexbox*/
+  justify-content: center; /*center my container on the main-axis*/
+  align-items: center; /*center my container on the cross-axis*/
+}
+
+h3 {
+  color: var(--dark-desat-blue);
+  font-size: 1.125rem; /*root size is 16px. Body needs to be 18px. 18/16 = 1.125 */
+  font-weight: 700;
+}
+
+h3.name {
+  padding-right: 0.5rem;
+}
+
+p {
+  color: var(--dark-grayish-blue);
+}
+
+p.city {
+  font-size: 0.875rem; /*14px*/
+}
+
+p.social {
+  font-size: 0.625rem; /*10px*/
+  letter-spacing: 0.125rem;
+  margin-top: 0.25rem;
+}
+
+#container {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* z-index: -1; */
+}
+
+#container .top-section .top-section-image {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+}
+
+#container .profile-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container .profile-picture img {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -60px;
+}
+
+.profile-name-age {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.profile-city {
+  padding-bottom: 1.75rem;
+}
+
+.social-media {
+  border-top: 1px solid hsl(225, 10%, 92%);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem 0;
+}
